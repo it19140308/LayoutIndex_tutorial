@@ -1,0 +1,13 @@
+.alldivicescontainer{
+    
+    background: url('/public/images/hom2.avif')no-repeat;
+    width: 100vw;
+    height: 100vh;
+    overflowX: 'scroll';
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    position: fixed;
+    align-items: center;
+     
+}

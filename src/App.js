@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Createdevice from "./Pages/CreateDivices/Createdevice.js";
+import CreateLocation from "./Pages/CreateLocations/CreateLocation.js";
+import Home from "./Pages/Home/Home.js";
+import { BrowserRouter as BRouter, Route, Routes } from "react-router-dom";
+import ListLocations from "./Pages/ListLocatons/ListLocations.js";
+import UpdateDevice from "./Pages/UpdateDevice/UpdateDevice.js";
+import UpdateLocation from "./Pages/UpdateLocation/UpdateLocation.js";
+import locationDevice from "./Pages/locationDevice/locationDevice.js";
+import ListDevices from "./Pages/ListDevices/ListDevices.js";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+   <BRouter>
+    <Routes>
+
+      <Route path="/" Component={Home}></Route>
+      <Route path="/device/add" Component={Createdevice}></Route>
+      <Route path="/location/add" Component={CreateLocation}></Route>
+      <Route path="/location/" Component={ListLocations}></Route>
+      <Route path="/location/update/id" Component={UpdateLocation}></Route>
+      <Route path="/location/devices" Component={locationDevice}></Route>
+      <Route path="/device/" Component={ListDevices}></Route>
+      <Route path="/location/delete/id" ></Route>
+     
+
+
+    </Routes>
+   </BRouter>
+    
   );
 }
 
